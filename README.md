@@ -46,7 +46,7 @@ flowchart LR
   A[Visilant app] -->|JWT client assertion<br/>RS384 / JWKS| B(Epic auth server)
   B -->|access token| A
   A -->|FHIR R4 read/write| C[(Epic FHIR API)]
-  C --- D[Patient · Observation · DiagnosticReport<br/>ImagingStudy · Media · ServiceRequest]
+  C --- D["Patient · Observation<br/>DiagnosticReport<br/>ImagingStudy · Media<br/>ServiceRequest"]
 ```
 
 ### 👁️ Seeker: ML-assisted eye screening · *Visilant*
@@ -137,7 +137,7 @@ Most healthcare data still moves as HL7v2 pipes and C-CDA XML. I write the libra
   <img alt="Toolkit" src="assets/section-stack-light.svg" width="100%">
 </picture>
 
-| | |
+| Area | Tools |
 |---|---|
 | **Interoperability** | ![FHIR R4](https://img.shields.io/badge/FHIR_R4-0B0F14?style=flat-square&logo=fhir&logoColor=2DD4BF) ![HL7v2](https://img.shields.io/badge/HL7v2-0B0F14?style=flat-square) ![C-CDA](https://img.shields.io/badge/C--CDA-0B0F14?style=flat-square) ![SMART-on-FHIR](https://img.shields.io/badge/SMART--on--FHIR-0B0F14?style=flat-square) ![Epic](https://img.shields.io/badge/Epic-0B0F14?style=flat-square) ![OpenMRS](https://img.shields.io/badge/OpenMRS-0B0F14?style=flat-square) ![ABHA](https://img.shields.io/badge/ABHA-0B0F14?style=flat-square) |
 | **Compliance** | ![HIPAA](https://img.shields.io/badge/HIPAA-0B0F14?style=flat-square) ![SOC 2](https://img.shields.io/badge/SOC_2-0B0F14?style=flat-square) |
