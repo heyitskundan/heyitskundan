@@ -2,10 +2,10 @@
 <style>.tile{fill:#111820;stroke:#1F2A36}.big{font:800 48px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:-1.5px;fill:#E6EDF3}
 .l1{font:500 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#E6EDF3}.l2{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#8B98A5}</style><g transform="translate(0,0)"><rect x=".5" y=".5" width="281" height="159" rx="14" class="tile"/>
 <rect x="24" y="24" width="28" height="3" rx="1.5" fill="#2DD4BF"/>
-<text x="24" y="92" class="big">5</text><text x="24" y="122" class="l1">hospitals live on</text><text x="24" y="142" class="l2">Epic SMART-on-FHIR</text></g><g transform="translate(306,0)"><rect x=".5" y=".5" width="281" height="159" rx="14" class="tile"/>
+<text x="24" y="92" class="big">150K+</text><text x="24" y="122" class="l1">users on the enterprise</text><text x="24" y="142" class="l2">platform I led</text></g><g transform="translate(306,0)"><rect x=".5" y=".5" width="281" height="159" rx="14" class="tile"/>
 <rect x="24" y="24" width="28" height="3" rx="1.5" fill="#2DD4BF"/>
-<text x="24" y="92" class="big">50K+</text><text x="24" y="122" class="l1">patients screened</text><text x="24" y="142" class="l2">in production</text></g><g transform="translate(612,0)"><rect x=".5" y=".5" width="281" height="159" rx="14" class="tile"/>
+<text x="24" y="92" class="big">16</text><text x="24" y="122" class="l1">people on the team</text><text x="24" y="142" class="l2">I led as tech lead</text></g><g transform="translate(612,0)"><rect x=".5" y=".5" width="281" height="159" rx="14" class="tile"/>
 <rect x="24" y="24" width="28" height="3" rx="1.5" fill="#2DD4BF"/>
-<text x="24" y="92" class="big">150K+</text><text x="24" y="122" class="l1">users on the platform</text><text x="24" y="142" class="l2">I led at Ziplyne</text></g><g transform="translate(918,0)"><rect x=".5" y=".5" width="281" height="159" rx="14" class="tile"/>
+<text x="24" y="92" class="big">5</text><text x="24" y="122" class="l1">hospitals live</text><text x="24" y="142" class="l2">built from scratch in 2 yrs</text></g><g transform="translate(918,0)"><rect x=".5" y=".5" width="281" height="159" rx="14" class="tile"/>
 <rect x="24" y="24" width="28" height="3" rx="1.5" fill="#2DD4BF"/>
-<text x="24" y="92" class="big">2</text><text x="24" y="122" class="l1">compliance audits</text><text x="24" y="142" class="l2">HIPAA + SOC 2</text></g></svg>
+<text x="24" y="92" class="big">50K+</text><text x="24" y="122" class="l1">patients screened</text><text x="24" y="142" class="l2">through my ML pipeline</text></g></svg>
