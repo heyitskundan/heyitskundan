@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img alt="Kundan Sinha · Engineering lead, healthcare interoperability" src="assets/header-light.svg" width="100%">
+  <img alt="Kundan Sinha · Full-stack engineering lead" src="assets/header-light.svg" width="100%">
 </picture>
 
 <p align="left">
@@ -17,15 +17,21 @@
   <img alt="About" src="assets/section-about-light.svg" width="100%">
 </picture>
 
-I build the plumbing between clinical systems and the products that need their data: FHIR R4, HL7v2, C-CDA, SMART-on-FHIR and Epic, with HIPAA in mind from the first commit.
+I'm a full-stack engineer with 8+ years of building products end to end: React and Angular front ends, Node.js and TypeScript back ends, AWS infrastructure, and the integrations that tie it all together. I've been the first engineer on a product and the tech lead of a 16-person team, often both at once.
 
-As **founding engineer at Visilant**, I took a healthcare product from nothing to **5 live hospital deployments in 2 years**, wired it into **Epic over SMART-on-FHIR**, and carried it through a **HIPAA audit**. Its eye-screening pipeline has reached **50,000+ patients**. At the same time I was **engineering lead at Ziplyne**, running a **16-person team** that shipped an enterprise platform to **150K+ users**, 30K of them at **Johns Hopkins**, through **SOC 2**.
+Along the way I've worked across very different problems:
 
-I'm based in Hyderabad and work US hours. I'm looking for Lead or Staff roles at healthtech, EHR and interoperability companies.
+- **Enterprise SaaS:** a Chrome-extension platform serving **150K+ users**, 30K of them at **Johns Hopkins**, across ServiceNow, SAP, Workday and more
+- **Identity and data:** SAML/OAuth2 SSO for enterprise customers and an HR data sync that scaled to **120K records**
+- **Healthcare:** a product taken from zero to **5 live hospitals in 2 years**, with an Epic integration and an ML screening pipeline that has seen **50,000+ patients**
+- **Compliance:** owned the engineering side of **HIPAA** and **SOC 2** audits
+- **AI tooling:** MCP servers, on-device speech-to-text, and local-first apps on the side
+
+I'm based in Hyderabad and work US hours. I'm open to Lead, Staff and senior full-stack roles, in any domain where the problems are interesting.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/impact-dark.svg">
-  <img alt="5 hospitals on Epic SMART-on-FHIR · 50K+ patients screened · 150K+ users · HIPAA + SOC 2" src="assets/impact-light.svg" width="100%">
+  <img alt="150K+ users · 16-person team · 5 hospitals · 50K+ patients screened" src="assets/impact-light.svg" width="100%">
 </picture>
 
 <br><br>
@@ -35,10 +41,22 @@ I'm based in Hyderabad and work US hours. I'm looking for Lead or Staff roles at
   <img alt="Selected work" src="assets/section-work-light.svg" width="100%">
 </picture>
 
-### 🏥 Epic integration across 5 hospitals · *Visilant*
+### 🧭 URL+: an enterprise Chrome-extension platform for 150K users · *Ziplyne*
 
-**Problem.** Hospital customers needed screening results to land in the patient's Epic chart, with no re-typing and no CSV exports.<br>
-**What I built.** A SMART-on-FHIR backend client that reads and writes Patient, Observation, DiagnosticReport, ImagingStudy, Media and ServiceRequest. It authenticates by JWT client assertion against an RS384-signed JWKS. I also built multi-tenant isolation: tenant-scoped request context, JWT tenant checks and tenant-scoped caching.<br>
+**Problem.** Ziplyne's in-app guides run as a browser extension (Manifest V2/V3) on top of other companies' enterprise apps. They have to know exactly which screen a user is on, even though those apps' URLs change all the time.<br>
+**What I built.** Per-platform adapters that resolve those URLs to one canonical page, and a selector engine that finds targets through iframes and shadow DOM. It covers ServiceNow, SAP (Fiori, Portal, ESS), SuccessFactors, Microsoft Dynamics, Coupa and Workday.<br>
+**Outcome.** Serves **150K+ users**, including 30K at Johns Hopkins.
+
+### 🔐 Enterprise identity and HR sync · *Ziplyne*
+
+- **Workday HR sync:** RaaS report ingestion, user upsert and group reconciliation as a BullMQ job. Grew from **50K to 120K** records.
+- **SSO for 5 enterprise customers:** SAML (Okta, IBM Security Verify, Shibboleth) and Coupa OAuth2, with automatic user and role setup on first login.
+- **SOC 2:** owned the AWS database controls, covering encryption at rest and in transit, and backups.
+
+### 🏥 A healthcare product from zero to 5 hospitals · *Visilant*
+
+**Context.** I was the only full-stack engineer, owning the React front end and the Node.js back end. Hospital customers needed results to land in the patient's Epic chart, with no re-typing and no CSV exports.<br>
+**What I built.** The product itself, plus a SMART-on-FHIR backend client that reads and writes Patient, Observation, DiagnosticReport, ImagingStudy, Media and ServiceRequest. It authenticates by JWT client assertion against an RS384-signed JWKS. I also built multi-tenant isolation: tenant-scoped request context, JWT tenant checks and tenant-scoped caching.<br>
 **Outcome.** Live in 5 hospitals within 2 years. HIPAA audit passed, with audit-trail tables and ABHA health-ID handling.
 
 ```mermaid
@@ -54,18 +72,6 @@ flowchart LR
 **What I built.** APIs that send captured eye images to a production ML diagnosis model, and the clinician view that shows the suggested diagnosis next to the patient record.<br>
 **Outcome.** **50,000+ patients** screened in production with partners including Aravind Eye Hospital and Dr. Shroff's Charity Eye Hospital.
 
-### 🧭 URL+: page identification for 150K users · *Ziplyne*
-
-**Problem.** In-app guides have to know exactly which screen a user is on, across enterprise apps whose URLs change all the time.<br>
-**What I built.** Per-platform adapters that resolve those URLs to one canonical page, and a selector engine that finds targets through iframes and shadow DOM. It covers ServiceNow, SAP (Fiori, Portal, ESS), SuccessFactors, Microsoft Dynamics, Coupa and Workday.<br>
-**Outcome.** Serves **150K+ users**, including 30K at Johns Hopkins.
-
-### 🔐 Enterprise identity and HR sync · *Ziplyne*
-
-- **Workday HR sync:** RaaS report ingestion, user upsert and group reconciliation as a BullMQ job. Grew from **50K to 120K** records.
-- **SSO for 5 enterprise customers:** SAML (Okta, IBM Security Verify, Shibboleth) and Coupa OAuth2, with automatic user and role setup on first login.
-- **SOC 2:** owned the AWS database controls, covering encryption at rest and in transit, and backups.
-
 <br>
 
 <picture>
@@ -73,7 +79,7 @@ flowchart LR
   <img alt="Open source" src="assets/section-oss-light.svg" width="100%">
 </picture>
 
-Most healthcare data still moves as HL7v2 pipes and C-CDA XML. I write the libraries that turn it into FHIR without dropping fields, and that let you trace every output field back to its source.
+Three TypeScript libraries published on npm that turn legacy healthcare formats (HL7v2, C-CDA) into FHIR without dropping fields, plus a couple of local-first tools I built for myself.
 
 <p>
   <a href="https://github.com/heyitskundan/interop-gateway"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/oss-interop-gateway-dark.svg"><img src="assets/oss-interop-gateway-light.svg" alt="interop-gateway" width="32%"></picture></a>
@@ -81,9 +87,11 @@ Most healthcare data still moves as HL7v2 pipes and C-CDA XML. I write the libra
   <a href="https://github.com/heyitskundan/cda-fhir-translator"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/oss-cda-fhir-translator-dark.svg"><img src="assets/oss-cda-fhir-translator-light.svg" alt="cda-fhir-translator" width="32%"></picture></a>
 </p>
 
-> **For AI-in-healthcare teams:** `interop-gateway` ships an **MCP server**, so an AI agent can query a live EHR through 15 tools. Every call is scope-checked and audit-logged before it touches the system.
+> **MCP server:** `interop-gateway` ships an **MCP server** that lets an AI agent use a live system through 15 tools, with every call scope-checked and audit-logged first.
 
-**Side projects:** [whispr](https://github.com/heyitskundan/whispr) (on-device push-to-talk speech-to-text) · [daylog](https://github.com/heyitskundan/daylog) (local-first activity tracker with on-device OCR)
+**Side projects (Python):**
+- [whispr](https://github.com/heyitskundan/whispr): on-device push-to-talk speech-to-text. Hold a key, speak, and the text is pasted into whatever app you're in.
+- [daylog](https://github.com/heyitskundan/daylog): a local-first activity tracker that turns your day into a timeline of tasks and screenshots, using on-device OCR and SQLite.
 
 <br>
 
@@ -139,17 +147,18 @@ Most healthcare data still moves as HL7v2 pipes and C-CDA XML. I write the libra
 
 | Area | Tools |
 |---|---|
-| **Interoperability** | ![FHIR R4](https://img.shields.io/badge/FHIR_R4-0B0F14?style=flat-square&logo=fhir&logoColor=2DD4BF) ![HL7v2](https://img.shields.io/badge/HL7v2-0B0F14?style=flat-square) ![C-CDA](https://img.shields.io/badge/C--CDA-0B0F14?style=flat-square) ![SMART-on-FHIR](https://img.shields.io/badge/SMART--on--FHIR-0B0F14?style=flat-square) ![Epic](https://img.shields.io/badge/Epic-0B0F14?style=flat-square) ![OpenMRS](https://img.shields.io/badge/OpenMRS-0B0F14?style=flat-square) ![ABHA](https://img.shields.io/badge/ABHA-0B0F14?style=flat-square) |
-| **Compliance** | ![HIPAA](https://img.shields.io/badge/HIPAA-0B0F14?style=flat-square) ![SOC 2](https://img.shields.io/badge/SOC_2-0B0F14?style=flat-square) |
-| **Languages & frameworks** | ![TypeScript](https://img.shields.io/badge/TypeScript-0B0F14?style=flat-square&logo=typescript&logoColor=2DD4BF) ![Node.js](https://img.shields.io/badge/Node.js-0B0F14?style=flat-square&logo=nodedotjs&logoColor=2DD4BF) ![React](https://img.shields.io/badge/React-0B0F14?style=flat-square&logo=react&logoColor=2DD4BF) ![Angular](https://img.shields.io/badge/Angular-0B0F14?style=flat-square&logo=angular&logoColor=2DD4BF) ![SQL](https://img.shields.io/badge/SQL-0B0F14?style=flat-square) |
-| **Infrastructure** | ![AWS](https://img.shields.io/badge/AWS-0B0F14?style=flat-square&logo=amazonwebservices&logoColor=2DD4BF) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0B0F14?style=flat-square&logo=postgresql&logoColor=2DD4BF) ![MySQL](https://img.shields.io/badge/MySQL-0B0F14?style=flat-square&logo=mysql&logoColor=2DD4BF) ![Redis](https://img.shields.io/badge/Redis-0B0F14?style=flat-square&logo=redis&logoColor=2DD4BF) ![BullMQ](https://img.shields.io/badge/BullMQ-0B0F14?style=flat-square) |
-| **Identity** | ![SAML SSO](https://img.shields.io/badge/SAML_SSO-0B0F14?style=flat-square) ![OAuth2](https://img.shields.io/badge/OAuth2-0B0F14?style=flat-square) ![JWT/JWKS](https://img.shields.io/badge/JWT_%2F_JWKS-0B0F14?style=flat-square) ![Okta](https://img.shields.io/badge/Okta-0B0F14?style=flat-square&logo=okta&logoColor=2DD4BF) |
-| **AI tooling** | ![MCP](https://img.shields.io/badge/MCP_servers-0B0F14?style=flat-square) ![Claude Code](https://img.shields.io/badge/Claude_Code-0B0F14?style=flat-square&logo=anthropic&logoColor=2DD4BF) |
+| **Languages** | ![TypeScript](https://img.shields.io/badge/TypeScript-0B0F14?style=flat-square&logo=typescript&logoColor=2DD4BF) ![JavaScript](https://img.shields.io/badge/JavaScript-0B0F14?style=flat-square&logo=javascript&logoColor=2DD4BF) ![Python](https://img.shields.io/badge/Python-0B0F14?style=flat-square&logo=python&logoColor=2DD4BF) ![SQL](https://img.shields.io/badge/SQL-0B0F14?style=flat-square) |
+| **Front end** | ![React](https://img.shields.io/badge/React-0B0F14?style=flat-square&logo=react&logoColor=2DD4BF) ![Angular](https://img.shields.io/badge/Angular-0B0F14?style=flat-square&logo=angular&logoColor=2DD4BF) ![Chrome Extensions](https://img.shields.io/badge/Chrome_Extensions_(MV2%2FMV3)-0B0F14?style=flat-square&logo=googlechrome&logoColor=2DD4BF) ![Angular Material](https://img.shields.io/badge/Angular_Material-0B0F14?style=flat-square) ![Bootstrap](https://img.shields.io/badge/Bootstrap-0B0F14?style=flat-square&logo=bootstrap&logoColor=2DD4BF) |
+| **Back end** | ![Node.js](https://img.shields.io/badge/Node.js-0B0F14?style=flat-square&logo=nodedotjs&logoColor=2DD4BF) ![REST APIs](https://img.shields.io/badge/REST_APIs-0B0F14?style=flat-square) ![BullMQ](https://img.shields.io/badge/BullMQ-0B0F14?style=flat-square) ![Multi-tenant SaaS](https://img.shields.io/badge/Multi--tenant_SaaS-0B0F14?style=flat-square) |
+| **Data & infra** | ![AWS](https://img.shields.io/badge/AWS-0B0F14?style=flat-square&logo=amazonwebservices&logoColor=2DD4BF) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0B0F14?style=flat-square&logo=postgresql&logoColor=2DD4BF) ![MySQL](https://img.shields.io/badge/MySQL-0B0F14?style=flat-square&logo=mysql&logoColor=2DD4BF) ![Redis](https://img.shields.io/badge/Redis-0B0F14?style=flat-square&logo=redis&logoColor=2DD4BF) ![SQLite](https://img.shields.io/badge/SQLite-0B0F14?style=flat-square&logo=sqlite&logoColor=2DD4BF) |
+| **Identity & security** | ![SAML SSO](https://img.shields.io/badge/SAML_SSO-0B0F14?style=flat-square) ![OAuth2](https://img.shields.io/badge/OAuth2-0B0F14?style=flat-square) ![JWT/JWKS](https://img.shields.io/badge/JWT_%2F_JWKS-0B0F14?style=flat-square) ![Okta](https://img.shields.io/badge/Okta-0B0F14?style=flat-square&logo=okta&logoColor=2DD4BF) ![SOC 2](https://img.shields.io/badge/SOC_2-0B0F14?style=flat-square) ![HIPAA](https://img.shields.io/badge/HIPAA-0B0F14?style=flat-square) |
+| **Integrations** | ![Workday](https://img.shields.io/badge/Workday-0B0F14?style=flat-square) ![ServiceNow](https://img.shields.io/badge/ServiceNow-0B0F14?style=flat-square) ![SAP](https://img.shields.io/badge/SAP-0B0F14?style=flat-square&logo=sap&logoColor=2DD4BF) ![Epic](https://img.shields.io/badge/Epic_EHR-0B0F14?style=flat-square) ![FHIR R4](https://img.shields.io/badge/FHIR_R4-0B0F14?style=flat-square) ![HL7v2](https://img.shields.io/badge/HL7v2-0B0F14?style=flat-square) ![C-CDA](https://img.shields.io/badge/C--CDA-0B0F14?style=flat-square) |
+| **AI** | ![MCP](https://img.shields.io/badge/MCP_servers-0B0F14?style=flat-square) ![ML model integration](https://img.shields.io/badge/ML_model_integration-0B0F14?style=flat-square) ![Whisper](https://img.shields.io/badge/faster--whisper-0B0F14?style=flat-square) ![Claude Code](https://img.shields.io/badge/Claude_Code-0B0F14?style=flat-square&logo=anthropic&logoColor=2DD4BF) |
 
 <br>
 
 ---
 
 <p align="center">
-  <sub>Building on FHIR and need someone who has shipped it into real hospitals? <a href="mailto:heyitskundan.dev@gmail.com"><b>Let's talk.</b></a></sub>
+  <sub>Need someone who can own a product from the first commit to production? <a href="mailto:heyitskundan.dev@gmail.com"><b>Let's talk.</b></a></sub>
 </p>
