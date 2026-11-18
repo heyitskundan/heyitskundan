@@ -33,20 +33,20 @@ I'm open to Lead, Staff and senior full-stack roles, in any domain where the pro
 Ziplyne puts step-by-step guides on top of other companies' enterprise apps. The hard part is knowing exactly which screen a user is on, when apps like SAP and ServiceNow change their URLs all the time and bury content in iframes and shadow DOM. I led the team that built it and wrote the core engines.
 
 ```mermaid
-flowchart LR
-  subgraph B["User's browser"]
-    direction TB
-    APP["Enterprise app page<br/>ServiceNow · SAP · SuccessFactors<br/>Dynamics · Coupa · Workday"]
+flowchart TB
+  subgraph B["User's browser · Chrome extension (Manifest V2 / V3)"]
+    direction LR
+    APP["Enterprise app page<br/>ServiceNow · SAP · Workday<br/>SuccessFactors · Dynamics · Coupa"]
     CS["Content script<br/><b>URL+</b> page identification<br/>per-platform URL adapters"]
-    SEL["Selector engine<br/>finds targets through<br/>iframes + shadow DOM"]
+    SEL["Selector engine<br/>iframes + shadow DOM"]
     UI["Guide overlay<br/>walkthroughs · tooltips"]
-    BG["Extension background<br/>Manifest V2 / V3<br/>session · guide cache"]
     APP --> CS --> SEL --> UI
-    CS <--> BG
   end
 
+  BG["Extension background<br/>session · guide cache"]
+
   subgraph C["Ziplyne cloud on AWS"]
-    direction TB
+    direction LR
     API["Node.js / TypeScript API"]
     DB[("Database<br/>encrypted at rest + in transit")]
     Q["BullMQ workers<br/>Workday HR sync"]
@@ -55,11 +55,12 @@ flowchart LR
   end
 
   IDP["Identity providers<br/>SAML: Okta · IBM Verify · Shibboleth<br/>OAuth2: Coupa"]
-  WD["Workday<br/>RaaS reports"]
+  WD["Workday RaaS reports"]
 
+  CS <--> BG
   BG <-->|"guides + user context"| API
   BG -->|"sign in"| IDP
-  IDP -->|"assertion / token<br/>auto-provision user + role"| API
+  IDP -->|"assertion / token · auto-provision user + role"| API
   WD -->|"users + groups"| Q
 ```
 
@@ -93,14 +94,11 @@ flowchart LR
 
 ## Open source and side projects
 
-<p>
-  <a href="https://github.com/heyitskundan/interop-gateway"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-interop-gateway-dark.svg"><img src="assets/card-interop-gateway-light.svg" alt="interop-gateway" width="49%"></picture></a>
-  <a href="https://github.com/heyitskundan/hl7-fhir-translator"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-hl7-fhir-translator-dark.svg"><img src="assets/card-hl7-fhir-translator-light.svg" alt="hl7-fhir-translator" width="49%"></picture></a>
-  <a href="https://github.com/heyitskundan/cda-fhir-translator"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-cda-fhir-translator-dark.svg"><img src="assets/card-cda-fhir-translator-light.svg" alt="cda-fhir-translator" width="49%"></picture></a>
-  <a href="https://github.com/heyitskundan/whispr"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-whispr-dark.svg"><img src="assets/card-whispr-light.svg" alt="whispr" width="49%"></picture></a>
-  <a href="https://github.com/heyitskundan/daylog"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-daylog-dark.svg"><img src="assets/card-daylog-light.svg" alt="daylog" width="49%"></picture></a>
-  <a href="https://github.com/Intelehealth/intelehealth-doctor-webapp"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-intelehealth-doctor-webapp-dark.svg"><img src="assets/card-intelehealth-doctor-webapp-light.svg" alt="intelehealth-doctor-webapp" width="49%"></picture></a>
-</p>
+- **[interop-gateway](https://github.com/heyitskundan/interop-gateway)**, **[hl7-fhir-translator](https://github.com/heyitskundan/hl7-fhir-translator)** and **[cda-fhir-translator](https://github.com/heyitskundan/cda-fhir-translator)**: TypeScript libraries on npm that convert HL7v2 and C-CDA to FHIR R4 and back without losing fields
+- **[whispr](https://github.com/heyitskundan/whispr)**: on-device push-to-talk speech-to-text in Python
+- **[daylog](https://github.com/heyitskundan/daylog)**: a local-first activity tracker with on-device OCR
+
+All of them are pinned below.
 
 `interop-gateway` also ships an **MCP server**, so an AI agent can work with a live system through 15 tools, with every call scope-checked and audit-logged first.
 
