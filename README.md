@@ -32,37 +32,10 @@ I'm open to Lead, Staff and senior full-stack roles, in any domain where the pro
 
 Ziplyne puts step-by-step guides on top of other companies' enterprise apps. The hard part is knowing exactly which screen a user is on, when apps like SAP and ServiceNow change their URLs all the time and bury content in iframes and shadow DOM. I led the team that built it and wrote the core engines.
 
-```mermaid
-flowchart TB
-  subgraph B["User's browser · Chrome extension (Manifest V2 / V3)"]
-    direction LR
-    APP["Enterprise app page<br/>ServiceNow · SAP · Workday<br/>SuccessFactors · Dynamics · Coupa"]
-    CS["Content script<br/><b>URL+</b> page identification<br/>per-platform URL adapters"]
-    SEL["Selector engine<br/>iframes + shadow DOM"]
-    UI["Guide overlay<br/>walkthroughs · tooltips"]
-    APP --> CS --> SEL --> UI
-  end
-
-  BG["Extension background<br/>session · guide cache"]
-
-  subgraph C["Ziplyne cloud on AWS"]
-    direction LR
-    API["Node.js / TypeScript API"]
-    DB[("Database<br/>encrypted at rest + in transit")]
-    Q["BullMQ workers<br/>Workday HR sync"]
-    API --> DB
-    Q --> DB
-  end
-
-  IDP["Identity providers<br/>SAML: Okta · IBM Verify · Shibboleth<br/>OAuth2: Coupa"]
-  WD["Workday RaaS reports"]
-
-  CS <--> BG
-  BG <-->|"guides + user context"| API
-  BG -->|"sign in"| IDP
-  IDP -->|"assertion / token · auto-provision user + role"| API
-  WD -->|"users + groups"| Q
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/ziplyne-architecture-dark.svg">
+  <img alt="Ziplyne architecture: the Chrome extension's content script runs URL+ page identification and the selector engine, then shows the guide overlay. The extension background syncs guides with a Node.js API on AWS, signs users in through SAML or OAuth2 identity providers, and BullMQ workers sync Workday users into the database." src="assets/ziplyne-architecture-light.svg" width="100%">
+</picture>
 
 - **URL+ page identification:** per-platform adapters resolve volatile URLs to one canonical page, so the right guide shows on the right screen for **150K+ users** (30K+ at Johns Hopkins)
 - **Selector engine:** finds guide targets inside iframes and shadow DOM across six enterprise platforms
