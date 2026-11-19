@@ -4,9 +4,9 @@
 </picture>
 
 <p>
-  <a href="https://heyitskundan.com"><img src="https://img.shields.io/badge/heyitskundan.com-24292F?style=flat&logo=googlechrome&logoColor=white" alt="Website"></a>
+  <a href="https://heyitskundan.com"><img src="https://img.shields.io/badge/Portfolio-24292F?style=flat&logo=googlechrome&logoColor=white" alt="Portfolio"></a>
   <a href="https://linkedin.com/in/heyitskundan"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="mailto:heyitskundan.dev@gmail.com"><img src="https://img.shields.io/badge/heyitskundan.dev@gmail.com-EA4335?style=flat&logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="mailto:heyitskundan.dev@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white" alt="Email"></a>
 </p>
 
 ## About
